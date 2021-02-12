@@ -12,7 +12,15 @@ btns.forEach(function(btn){
         else if (styles.contains('reset')) count =0;
         else if (styles.contains('increase')) count++;
         value.innerHTML = count; //or use .textcontant
+        if(count>0) {
+            value.style.color = "green";
+        } else if(count<0) {
+            value.style.color = "red";
+        } else{
+            value.style.color = document.body.style.color;
+        }
     });
 }
 
 );
+
